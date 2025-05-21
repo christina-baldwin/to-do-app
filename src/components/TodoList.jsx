@@ -8,6 +8,11 @@ const TodoList = () => {
 
   return (
     <>
+      <p>All tasks: {todos.length}</p>
+      <p>
+        Uncompleted tasks:{" "}
+        {todos.filter((todo) => todo.complete === false).length}
+      </p>
       {todos.map((todo) => (
         <ToDoMessage key={todo.id} {...todo} />
       ))}
