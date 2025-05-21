@@ -1,5 +1,10 @@
+import ToDoForm from "./components/ToDoForm";
+
 export const App = () => {
   return (
-    <h1>React Boilerplate</h1>
-  )
-}
+    <>
+      <h1>My To Do List</h1>
+      <ToDoForm />
+    </>
+  );
+};
