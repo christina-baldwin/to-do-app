@@ -1,13 +1,7 @@
 import { create } from "zustand";
 
 const initialState = {
-  todos: [
-    {
-      id: 1,
-      message: "",
-      complete: false,
-    },
-  ],
+  todos: [],
 };
 
 const useTodoStore = create((set) => ({
@@ -19,13 +13,28 @@ const useTodoStore = create((set) => ({
       message,
       complete: false,
     };
-
     set((state) => ({ todos: [newTodo, ...state.todos] }));
   },
 
   removeTodo: (id) => {
     set((state) => ({
       todos: state.todos.filter((todo) => todo.id !== id),
+    }));
+  },
+
+  completeTodo: (id) => {
+    set((state) => ({
+      todos: state.todos.map((todo) =>
+        todo.id === id ? { ...todo, complete: true } : todo
+      ),
+    }));
+  },
+
+  uncompleteTodo: (id) => {
+    set((state) => ({
+      todos: state.todos.map((todo) =>
+        todo.id === id ? { ...todo, complete: false } : todo
+      ),
     }));
   },
 }));
