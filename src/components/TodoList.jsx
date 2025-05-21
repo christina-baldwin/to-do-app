@@ -4,7 +4,8 @@ import ToDoMessage from "./ToDoMessage";
 const TodoList = () => {
   const todos = useTodoStore((state) => state.todos);
 
-  if (todos.length === 0) return <p>No tasks yet. Be the first!</p>;
+  if (todos.length === 0)
+    return <p>You have no tasks yet. Add a to-do to get started!</p>;
 
   return (
     <>

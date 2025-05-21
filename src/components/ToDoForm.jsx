@@ -19,7 +19,7 @@ const ToDoForm = () => {
         onChange={(e) => setMessage(e.target.value)}
         value={message}
       />
-      <button type="submit">Submit</button>
+      <button type="submit">Add my to-do</button>
     </form>
   );
 };
