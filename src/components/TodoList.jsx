@@ -17,7 +17,7 @@ const TodoList = () => {
 
   return (
     <div className="flex items-center flex-col gap-10 min-w-sm">
-      <div className="flex items-center flex-row gap-2">
+      <div className="flex flex-row gap-8">
         <p>All tasks: {todos.length}</p>
         <p>
           Uncompleted tasks:{" "}
