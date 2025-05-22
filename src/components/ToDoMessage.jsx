@@ -11,6 +11,15 @@ const ToDoMessage = ({ id, message, complete, category }) => {
       <div className="bg-black text-white max-w-20 flex items-center justify-center rounded-lg p-1 text-sm">
         <p>{category}</p>
       </div>
+      <div className="text-md flex flex-row items-center gap-2">
+        <p>Complete?</p>
+
+        {complete ? (
+          <ion-icon name="checkmark-circle-outline"></ion-icon>
+        ) : (
+          <ion-icon name="close-circle-outline"></ion-icon>
+        )}
+      </div>
       <div className="flex flex-row gap-4">
         <button
           className="border border-solid border-black rounded-md cursor-pointer p-2"
@@ -24,15 +33,6 @@ const ToDoMessage = ({ id, message, complete, category }) => {
         >
           {complete ? "Click to uncomplete" : "Click to complete"}
         </button>
-      </div>
-      <div className="text-md flex flex-row items-center gap-2">
-        <p>Complete?</p>
-
-        {complete ? (
-          <ion-icon name="checkmark-circle-outline"></ion-icon>
-        ) : (
-          <ion-icon name="close-circle-outline"></ion-icon>
-        )}
       </div>
     </div>
   );
