@@ -26,7 +26,7 @@ const ToDoForm = () => {
         value={message}
         className="border border-solid border-gray h-10"
       />
-      <h3>Select task category:</h3>
+      <h3>Task category:</h3>
       <div className="p-2 flex flex-col gap-2">
         <label>
           <input

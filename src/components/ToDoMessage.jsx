@@ -25,11 +25,15 @@ const ToDoMessage = ({ id, message, complete, category }) => {
           {complete ? "Click to uncomplete" : "Click to complete"}
         </button>
       </div>
-      <p>
-        {complete
-          ? "This task has been completed"
-          : "This task has not been completed"}
-      </p>
+      <div className="text-md flex flex-row items-center gap-2">
+        <p>Complete?</p>
+
+        {complete ? (
+          <ion-icon name="checkmark-circle-outline"></ion-icon>
+        ) : (
+          <ion-icon name="close-circle-outline"></ion-icon>
+        )}
+      </div>
     </div>
   );
 };
