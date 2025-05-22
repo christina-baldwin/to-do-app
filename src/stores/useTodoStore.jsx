@@ -7,11 +7,12 @@ const initialState = {
 const useTodoStore = create((set) => ({
   ...initialState,
 
-  createTodo: (message) => {
+  createTodo: (message, category) => {
     const newTodo = {
       id: Date.now(),
       message,
       complete: false,
+      category,
     };
     set((state) => ({ todos: [newTodo, ...state.todos] }));
   },
