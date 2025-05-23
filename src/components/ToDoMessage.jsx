@@ -31,7 +31,7 @@ const ToDoMessage = ({ id, message, complete, category }) => {
           className="border border-solid border-black rounded-md cursor-pointer p-2"
           onClick={complete ? () => uncompleteTodo(id) : () => completeTodo(id)}
         >
-          {complete ? "Click to uncomplete" : "Click to complete"}
+          {complete ? "Mark as incomplete" : "Mark as complete"}
         </button>
       </div>
     </div>
