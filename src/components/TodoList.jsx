@@ -18,7 +18,7 @@ const TodoList = () => {
         <div className="flex flex-row gap-8">
           <p>All tasks: {todos.length}</p>
           <p>
-            Uncompleted tasks:{" "}
+            Incomplete tasks:{" "}
             {todos.filter((todo) => todo.complete === false).length}
           </p>
         </div>
@@ -26,19 +26,19 @@ const TodoList = () => {
           <p>Filter tasks by:</p>
           <div className="flex gap-2">
             <button
-              className="border border-solid border-black rounded-md cursor-pointer p-2"
+              className="border border-solid border-blue-200  rounded-md cursor-pointer p-2  hover:bg-blue-200 hover:text-gray-800 "
               onClick={() => setFilter("all")}
             >
               All
             </button>
             <button
-              className="border border-solid border-black rounded-md cursor-pointer p-2"
+              className="border border-solid border-blue-200  rounded-md cursor-pointer p-2  hover:bg-blue-200 hover:text-gray-800 "
               onClick={() => setFilter("completed")}
             >
               Complete
             </button>
             <button
-              className="border border-solid border-black rounded-md cursor-pointer p-2"
+              className="border border-solid border-blue-200 rounded-md cursor-pointer p-2  hover:bg-blue-200 hover:text-gray-800 "
               onClick={() => setFilter("uncompleted")}
             >
               Incomplete
@@ -54,7 +54,7 @@ const TodoList = () => {
       <div className="flex flex-row gap-8">
         <p>All tasks: {todos.length}</p>
         <p>
-          Uncompleted tasks:{" "}
+          Incomplete tasks:{" "}
           {todos.filter((todo) => todo.complete === false).length}
         </p>
       </div>
@@ -62,19 +62,19 @@ const TodoList = () => {
         <p>Filter tasks by:</p>
         <div className="flex gap-2">
           <button
-            className="border border-solid border-black rounded-md cursor-pointer p-2"
+            className="border border-solid border-blue-200 rounded-md cursor-pointer p-2  hover:bg-blue-200 hover:text-gray-800 "
             onClick={() => setFilter("all")}
           >
             All
           </button>
           <button
-            className="border border-solid border-black rounded-md cursor-pointer p-2"
+            className="border border-solid border-blue-200 rounded-md cursor-pointer p-2  hover:bg-blue-200 hover:text-gray-800 "
             onClick={() => setFilter("completed")}
           >
             Complete
           </button>
           <button
-            className="border border-solid border-black rounded-md cursor-pointer p-2"
+            className="border border-solid border-blue-200 rounded-md cursor-pointer p-2  hover:bg-blue-200 hover:text-gray-800 "
             onClick={() => setFilter("uncompleted")}
           >
             Incomplete
