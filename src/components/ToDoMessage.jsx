@@ -34,6 +34,7 @@ const ToDoMessage = ({ id, message, complete, category }) => {
           {complete ? "Mark as incomplete" : "Mark as complete"}
         </button>
       </div>
+      <p>Task added: {new Date(id).toLocaleString()}</p>
     </div>
   );
 };

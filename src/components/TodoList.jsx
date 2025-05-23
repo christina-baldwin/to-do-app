@@ -45,7 +45,7 @@ const TodoList = () => {
             </button>
           </div>
         </div>
-        <p>You have no tasks yet. Add a to-do to get started!</p>;
+        <p>You have no tasks yet. Add a to-do to get started!</p>
       </div>
     );
 
