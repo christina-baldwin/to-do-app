@@ -22,19 +22,24 @@ const ToDoMessage = ({ id, message, complete, category }) => {
         <p>Complete?</p>
 
         {complete ? (
-          <ion-icon name="checkmark-circle-outline"></ion-icon>
+          <ion-icon
+            aria-hidden="true"
+            name="checkmark-circle-outline"
+          ></ion-icon>
         ) : (
-          <ion-icon name="close-circle-outline"></ion-icon>
+          <ion-icon aria-hidden="true" name="close-circle-outline"></ion-icon>
         )}
       </div>
       <div className="flex flex-row gap-4">
         <button
+          aria-label="Mark task as complete or incomplete"
           className="border border-solid border-blue-200 rounded-md cursor-pointer p-2  hover:bg-blue-200 hover:text-gray-800 "
           onClick={complete ? () => uncompleteTodo(id) : () => completeTodo(id)}
         >
           {complete ? "Mark as incomplete" : "Mark as complete"}
         </button>
         <button
+          aria-label="Delete task"
           className="bg-blue-200 text-gray-800 border border-solid border-blue-200 rounded-md cursor-pointer p-2  hover:bg-gray-800 hover:text-blue-200 "
           onClick={() => removeTodo(id)}
         >

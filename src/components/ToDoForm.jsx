@@ -25,6 +25,7 @@ const ToDoForm = () => {
     >
       <h2 className="text-lg">What do you need to do?</h2>
       <input
+        aria-label="Task name"
         type="text"
         onChange={(e) => setMessage(e.target.value)}
         required
@@ -83,6 +84,7 @@ const ToDoForm = () => {
         </label>
       </div>
       <button
+        aria-label="Add task"
         className="border border-solid border-blue-200 hover:bg-blue-200 hover:text-gray-800  rounded-md cursor-pointer"
         type="submit"
       >

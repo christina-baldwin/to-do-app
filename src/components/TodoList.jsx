@@ -25,6 +25,7 @@ const TodoList = () => {
         <p>Filter tasks by:</p>
         <div className="flex gap-2 flex-wrap">
           <button
+            aria-label="Show all tasks"
             className={`border border-solid border-blue-200 rounded-md cursor-pointer p-2 hover:bg-blue-200 hover:text-gray-800 ${
               filter === "all" ? "bg-blue-200 text-gray-800 shadow-md" : ""
             }`}
@@ -33,6 +34,7 @@ const TodoList = () => {
             All
           </button>
           <button
+            aria-label="Show complete tasks"
             className={`border border-solid border-blue-200 rounded-md cursor-pointer p-2 hover:bg-blue-200 hover:text-gray-800 ${
               filter === "complete" ? "bg-blue-200 text-gray-800 shadow-md" : ""
             }`}
@@ -41,6 +43,7 @@ const TodoList = () => {
             Complete
           </button>
           <button
+            aria-label="Show incomplete tasks"
             className={`border border-solid border-blue-200 rounded-md cursor-pointer p-2 hover:bg-blue-200 hover:text-gray-800 ${
               filter === "incomplete"
                 ? "bg-blue-200 text-gray-800 shadow-md"
@@ -57,6 +60,7 @@ const TodoList = () => {
           filter === "complete" ? (
             <div className="flex flex-col items-center gap-6">
               <ion-icon
+                aria-hidden="true"
                 style={{ fontSize: "5rem" }}
                 name="document-outline"
               ></ion-icon>
@@ -65,6 +69,7 @@ const TodoList = () => {
           ) : filter === "incomplete" ? (
             <div className="flex flex-col items-center text-center gap-6">
               <ion-icon
+                aria-hidden="true"
                 style={{ fontSize: "5rem" }}
                 name="document-outline"
               ></ion-icon>
@@ -75,6 +80,7 @@ const TodoList = () => {
           ) : (
             <div className="flex flex-col items-center gap-6">
               <ion-icon
+                aria-hidden="true"
                 style={{ fontSize: "5rem" }}
                 name="document-outline"
               ></ion-icon>
