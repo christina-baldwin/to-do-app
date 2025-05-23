@@ -35,13 +35,13 @@ const TodoList = () => {
               className="border border-solid border-black rounded-md cursor-pointer p-2"
               onClick={() => setFilter("completed")}
             >
-              Completed
+              Complete
             </button>
             <button
               className="border border-solid border-black rounded-md cursor-pointer p-2"
               onClick={() => setFilter("uncompleted")}
             >
-              Uncompleted
+              Incomplete
             </button>
           </div>
         </div>
@@ -71,13 +71,13 @@ const TodoList = () => {
             className="border border-solid border-black rounded-md cursor-pointer p-2"
             onClick={() => setFilter("completed")}
           >
-            Completed
+            Complete
           </button>
           <button
             className="border border-solid border-black rounded-md cursor-pointer p-2"
             onClick={() => setFilter("uncompleted")}
           >
-            Uncompleted
+            Incomplete
           </button>
         </div>
       </div>
