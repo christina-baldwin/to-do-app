@@ -53,8 +53,16 @@ const TodoList = () => {
         </div>
       </div>
       <div className="flex gap-6 flex-wrap justify-center w-full max-w-6xl mx-auto px-4 sm:px-8">
-        {todos.length === 0 ? (
-          <p>You have no tasks yet. Add a to-do to get started!</p>
+        {filteredTodos.length === 0 ? (
+          filter === "complete" ? (
+            <p>No completed tasks yet. Complete a task to see it here.</p>
+          ) : filter === "incomplete" ? (
+            <p>
+              No incomplete tasks yet. Add a task or uncheck a completed one.
+            </p>
+          ) : (
+            <p>You have no tasks yet. Add a to-do to get started!</p>
+          )
         ) : (
           filteredTodos.map((todo) => <ToDoMessage key={todo.id} {...todo} />)
         )}
