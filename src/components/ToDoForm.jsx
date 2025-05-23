@@ -15,7 +15,12 @@ const ToDoForm = () => {
 
   return (
     <form
-      className="border border-solid border-blue-200 rounded-sm p-4 flex flex-col gap-4 min-w-sm"
+      className="
+    border border-solid border-blue-200 rounded-sm p-4
+    flex flex-col gap-4
+    w-full max-w-md
+    mx-auto
+  "
       onSubmit={handleSubmit}
     >
       <h2 className="text-lg">What do you need to do?</h2>

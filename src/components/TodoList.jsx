@@ -13,8 +13,8 @@ const TodoList = () => {
   });
 
   return (
-    <div className="flex items-center flex-col gap-10 min-w-sm">
-      <div className="flex flex-row gap-8">
+    <div className="flex items-center flex-col gap-10 w-full max-w-xl mx-auto px-4 sm:px-8">
+      <div className="flex flex-row gap-8 flex-wrap">
         <p>All tasks: {todos.length}</p>
         <p>
           Incomplete tasks:{" "}
@@ -23,7 +23,7 @@ const TodoList = () => {
       </div>
       <div className="flex flex-col gap-2">
         <p>Filter tasks by:</p>
-        <div className="flex gap-2">
+        <div className="flex gap-2 flex-wrap">
           <button
             className={`border border-solid border-blue-200 rounded-md cursor-pointer p-2 hover:bg-blue-200 hover:text-gray-800 ${
               filter === "all" ? "bg-blue-200 text-gray-800 shadow-md" : ""
@@ -52,7 +52,7 @@ const TodoList = () => {
           </button>
         </div>
       </div>
-      <div className="flex gap-10">
+      <div className="flex gap-10 flex-wrap justify-center w-full">
         {todos.length === 0 ? (
           <p>You have no tasks yet. Add a to-do to get started!</p>
         ) : (

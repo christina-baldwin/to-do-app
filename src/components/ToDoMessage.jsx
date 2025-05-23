@@ -6,7 +6,14 @@ const ToDoMessage = ({ id, message, complete, category }) => {
   const uncompleteTodo = useTodoStore((state) => state.uncompleteTodo);
 
   return (
-    <div className="border border-solid border-blue-200 rounded-sm flex flex-col gap-6 p-4 min-w-sm">
+    <div
+      className="
+        border border-solid border-blue-200 rounded-sm
+        flex flex-col gap-4 p-4
+        w-full max-w-md
+        mx-auto
+      "
+    >
       <div className="bg-purple-200 text-gray-800 flex items-center justify-center rounded-lg p-1 text-sm">
         <p>{category}</p>
       </div>
