@@ -7,8 +7,8 @@ const TodoList = () => {
   const [filter, setFilter] = useState("all");
 
   const filteredTodos = todos.filter((todo) => {
-    if (filter === "completed") return todo.complete;
-    if (filter === "uncompleted") return !todo.complete;
+    if (filter === "complete") return todo.complete;
+    if (filter === "incomplete") return !todo.complete;
     return true;
   });
 
@@ -25,20 +25,28 @@ const TodoList = () => {
         <p>Filter tasks by:</p>
         <div className="flex gap-2">
           <button
-            className="border border-solid border-blue-200  rounded-md cursor-pointer p-2  hover:bg-blue-200 hover:text-gray-800 "
+            className={`border border-solid border-blue-200 rounded-md cursor-pointer p-2 hover:bg-blue-200 hover:text-gray-800 ${
+              filter === "all" ? "bg-blue-200 text-gray-800 shadow-md" : ""
+            }`}
             onClick={() => setFilter("all")}
           >
             All
           </button>
           <button
-            className="border border-solid border-blue-200  rounded-md cursor-pointer p-2  hover:bg-blue-200 hover:text-gray-800 "
-            onClick={() => setFilter("completed")}
+            className={`border border-solid border-blue-200 rounded-md cursor-pointer p-2 hover:bg-blue-200 hover:text-gray-800 ${
+              filter === "complete" ? "bg-blue-200 text-gray-800 shadow-md" : ""
+            }`}
+            onClick={() => setFilter("complete")}
           >
             Complete
           </button>
           <button
-            className="border border-solid border-blue-200 rounded-md cursor-pointer p-2  hover:bg-blue-200 hover:text-gray-800 "
-            onClick={() => setFilter("uncompleted")}
+            className={`border border-solid border-blue-200 rounded-md cursor-pointer p-2 hover:bg-blue-200 hover:text-gray-800 ${
+              filter === "incomplete"
+                ? "bg-blue-200 text-gray-800 shadow-md"
+                : ""
+            }`}
+            onClick={() => setFilter("incomplete")}
           >
             Incomplete
           </button>
