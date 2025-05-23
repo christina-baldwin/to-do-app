@@ -52,7 +52,7 @@ const TodoList = () => {
           </button>
         </div>
       </div>
-      <div className="flex gap-10 flex-wrap justify-center w-full">
+      <div className="flex gap-6 flex-wrap justify-center w-full max-w-6xl mx-auto px-4 sm:px-8">
         {todos.length === 0 ? (
           <p>You have no tasks yet. Add a to-do to get started!</p>
         ) : (
