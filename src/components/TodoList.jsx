@@ -52,11 +52,13 @@ const TodoList = () => {
           </button>
         </div>
       </div>
-      {todos.length === 0 ? (
-        <p>You have no tasks yet. Add a to-do to get started!</p>
-      ) : (
-        filteredTodos.map((todo) => <ToDoMessage key={todo.id} {...todo} />)
-      )}
+      <div className="flex gap-10">
+        {todos.length === 0 ? (
+          <p>You have no tasks yet. Add a to-do to get started!</p>
+        ) : (
+          filteredTodos.map((todo) => <ToDoMessage key={todo.id} {...todo} />)
+        )}
+      </div>
     </div>
   );
 };
