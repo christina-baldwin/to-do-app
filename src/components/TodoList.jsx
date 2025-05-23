@@ -55,13 +55,31 @@ const TodoList = () => {
       <div className="flex gap-6 flex-wrap justify-center w-full max-w-6xl mx-auto px-4 sm:px-8">
         {filteredTodos.length === 0 ? (
           filter === "complete" ? (
-            <p>No completed tasks yet. Complete a task to see it here.</p>
+            <div className="flex flex-col items-center gap-6">
+              <ion-icon
+                style={{ fontSize: "5rem" }}
+                name="document-outline"
+              ></ion-icon>
+              <p>No completed tasks yet. Complete a task to see it here.</p>
+            </div>
           ) : filter === "incomplete" ? (
-            <p>
-              No incomplete tasks yet. Add a task or uncheck a completed one.
-            </p>
+            <div className="flex flex-col items-center text-center gap-6">
+              <ion-icon
+                style={{ fontSize: "5rem" }}
+                name="document-outline"
+              ></ion-icon>
+              <p>
+                No incomplete tasks yet. Add a task or uncheck a completed one.
+              </p>{" "}
+            </div>
           ) : (
-            <p>You have no tasks yet. Add a to-do to get started!</p>
+            <div className="flex flex-col items-center gap-6">
+              <ion-icon
+                style={{ fontSize: "5rem" }}
+                name="document-outline"
+              ></ion-icon>
+              <p>You have no tasks yet. Add a to-do to get started!</p>{" "}
+            </div>
           )
         ) : (
           filteredTodos.map((todo) => <ToDoMessage key={todo.id} {...todo} />)
