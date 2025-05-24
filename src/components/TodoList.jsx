@@ -1,6 +1,7 @@
 import { useState } from "react";
 import useTodoStore from "../stores/useTodoStore";
 import ToDoMessage from "./ToDoMessage";
+import TaskCounter from "./TaskCounter";
 
 const TodoList = () => {
   const todos = useTodoStore((state) => state.todos);
@@ -14,13 +15,7 @@ const TodoList = () => {
 
   return (
     <div className="flex items-center flex-col gap-10 w-full max-w-xl mx-auto px-4 sm:px-8">
-      <div className="flex flex-row gap-8 flex-wrap">
-        <p>All tasks: {todos.length}</p>
-        <p>
-          Incomplete tasks:{" "}
-          {todos.filter((todo) => todo.complete === false).length}
-        </p>
-      </div>
+      <TaskCounter />
       <div className="flex flex-col gap-2">
         <p>Filter tasks by:</p>
         <div className="flex gap-2 flex-wrap">
