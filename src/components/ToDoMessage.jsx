@@ -19,11 +19,12 @@ const ToDoMessage = ({ id, message, complete, category }) => {
       </div>
 
       <p
-        className={`text-lg p-4 rounded-sm border border-gray-100 ${
-          complete
-            ? "line-through text-gray-400 bg-gray-100 italic"
-            : "text-gray-800 bg-gray-50"
-        }`}
+        className={`text-lg p-4 rounded-sm border border-gray-100 break-words
+ ${
+   complete
+     ? "line-through text-gray-400 bg-gray-100 italic"
+     : "text-gray-800 bg-gray-50"
+ }`}
       >
         {message}
       </p>
