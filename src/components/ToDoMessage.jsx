@@ -17,7 +17,17 @@ const ToDoMessage = ({ id, message, complete, category }) => {
       <div className="bg-purple-200 text-gray-800 flex items-center justify-center rounded-lg p-1 text-sm">
         <p>{category}</p>
       </div>
-      <p className="bg-white text-gray-800 text-lg p-4 rounded-sm">{message}</p>
+
+      <p
+        className={`text-lg p-4 rounded-sm border border-gray-100 ${
+          complete
+            ? "line-through text-gray-400 bg-gray-100 italic"
+            : "text-gray-800 bg-gray-50"
+        }`}
+      >
+        {message}
+      </p>
+
       <div className="text-md flex flex-row items-center gap-2">
         <p>Complete?</p>
 
@@ -30,14 +40,16 @@ const ToDoMessage = ({ id, message, complete, category }) => {
           <ion-icon aria-hidden="true" name="close-circle-outline"></ion-icon>
         )}
       </div>
+
       <div className="flex flex-row gap-4">
         <button
           aria-label="Mark task as complete or incomplete"
           className="border border-solid border-blue-200 rounded-md cursor-pointer p-2  hover:bg-blue-200 hover:text-gray-800 "
           onClick={complete ? () => uncompleteTodo(id) : () => completeTodo(id)}
         >
-          {complete ? "Mark as incomplete" : "Mark as complete"}
+          Toggle Task
         </button>
+
         <button
           aria-label="Delete task"
           className="bg-blue-200 text-gray-800 border border-solid border-blue-200 rounded-md cursor-pointer p-2  hover:bg-gray-800 hover:text-blue-200 "
